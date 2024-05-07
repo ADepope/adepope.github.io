@@ -17,7 +17,7 @@ minimal: true             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "about.md", title: "About me"}
+  - {file: "index.md", title: "About me"}
   - {file: "README.md", title: "CV"}
   - {file: "research.md", title: "Research"}
   - {file: "README.md", title: "gVAMP"}
