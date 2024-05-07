@@ -12,3 +12,21 @@ title: Publications
   <div class="pubinfo">{{ pub.publication }}, {{ pub.year}}</div>
 </div>
 {% endfor %}
+
+
+.pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubtitle {
+  margin-bottom: 0.5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors,
+.pubinfo {
+  font-size: 75%;
+  margin-bottom: 0.75em;
+}
