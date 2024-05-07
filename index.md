@@ -1,6 +1,6 @@
 ---
 title: "About"
-permalink: ""
+permalink: URL
 layout: page
 ---
 
