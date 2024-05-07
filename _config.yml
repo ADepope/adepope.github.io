@@ -30,5 +30,10 @@ comments:
 #  disqus_shortname: ""    # see https://disqus.com/
 #  isso_domain: ""         # see https://posativ.org/isso/
 
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:name
+    
 plugins:
  - jekyll-feed
