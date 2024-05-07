@@ -1,3 +1,10 @@
+---
+title: "gVAMP"
+permalink: "/gvamp/"
+layout: page
+---
+
+
 ## Table of contents
 
 In this Wiki page we give a short tutorial on:
