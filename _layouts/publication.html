@@ -1,29 +1,34 @@
 ---
 layout: default
-title: Publications
 ---
 
-<h1 class="mt-4">Publications</h1>
-{% assign publications = site.publications | sort: "year" | reverse %}
-{% for pub in publications %}
-<div class="pubitem">
-  <div class="pubteaser">
-    <a href="{{pub.url}}">
-      <img src="/images/{{ pub.slug }}_small.png" alt="{{pub.slug}} publication teaser"/>
-    </a>
+<div class="page">
+
+  <h1 class="mt-4 publication-title">{{ page.title }}</h1>
+
+  <div class="publication-authors">
+    {{ page.authors }}
   </div>
-  <div class="pubtitle">
-    {{ pub.title }}
+
+  <div class="publication-info">
+    {{ page.publication }}, {{ page.year}}
   </div>
-  <div class="pubauthors">
-    {{ pub.authors }}
+
+  <div class="publication-teaser">
+    <img src="/images/{{ page.slug }}.png" alt="project teaser"/>
   </div>
-  <div class="pubinfo">
-    {{ pub.publication }}, {{ pub.year}}
-  </div>
-  <div class="publinks">
-    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-    <a href="{{pub.url}}"><i class="fas fa-arrow-right"></i> Project Page</a>
-  </div>
+
+  {{ content }}
+
+  <h2 id="downloads">Downloads</h2>
+  <p>
+    <a href="/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+    {% if page.slides %}
+    <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
+    {% endif %}
+    <a href="/download/{{ page.slug }}.bib"><i class="far fa-file-alt"></i> BibTex</a>&nbsp;&nbsp;
+    {% if page.doi %}
+    <a href="{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
+    {% endif %}
+  </p>
 </div>
-{% endfor %}
