@@ -7,9 +7,7 @@ Hi, I am a PhD student at the Institute of Science and Technology Austria (ISTA)
 
 Prior to my current studies, I obtained a Bachelor degree in Mathematics and Master in Mathematical statistics from University of Zagreb, [Department of Mathematics](https://www.pmf.unizg.hr/math/en).
 
-I am a PhD student at IST Austria working in the intersection between mathematically grounded ML,
-numerical mathematics, software development and genetics applications.
+I am a PhD student at IST Austria working in the intersection between mathematically grounded ML, numerical mathematics, software development and genetics applications.
 
-My hobbies include hiking and running, also when I have time I try to volunteer by preparing and giving
-lectures in competitive mathematics to gifted students from my old high-school and at MNM summer
+My hobbies include hiking and running, also when I have time I try to volunteer by preparing and giving lectures in competitive mathematics to gifted students from my old high-school and at MNM summer
 camps.
