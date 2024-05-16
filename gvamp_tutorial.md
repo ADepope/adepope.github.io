@@ -19,7 +19,7 @@ In this Wiki page we give a short tutorial on:
 ## 0. About gVAMP: Inference under Bayesian Linear model with Spike-and-Slab mixture of Gaussians prior
 
 Bayesian linear regression is the most widely used model interpretable model for high-dimensional inference in life sciences, and it allows for information on the signal structure to be incorporated in the inference process. We wish to estimate the high-dimensional 
-signal vector $\mathbf{\beta}\in \mathbb{R}^P$ from a vector of phenotype measurements $\mathbf{y} \in \mathbb{R}^N$ given by the following linear relationship: 
+signal vector $$\mathbf{\beta}\in \mathbb{R}^P$$ from a vector of phenotype measurements $\mathbf{y} \in \mathbb{R}^N$ given by the following linear relationship: 
 $$\Large y_i = \langle \mathbf{x}_i, \mathbf{\beta}  \rangle + \epsilon_i, \quad  \text{ for } i\in \{1,  \ldots, N\}.$$ 
 
 
