@@ -34,10 +34,6 @@ collections:
   publications:
     output: true
     permalink: /:collection/:name
-
-sass:
-  sass_dir: css
-    style:    compressed
   
 plugins:
  - jekyll-feed
