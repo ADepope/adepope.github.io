@@ -3,6 +3,9 @@ title: "About me"
 layout: page
 ---
 
+<head>
+<link rel="stylesheet" type="text/css" href="index.css" media=”screen” />
+</head>
 
 <p style="display:inline-block;">
   
