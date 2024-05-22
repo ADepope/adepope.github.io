@@ -3,11 +3,6 @@ title: "About me"
 layout: page
 ---
 
-<style>
-img {
-  width: 100%;
-}
-</style>
 
 <img src="/images/mypub19_small.jpg" alt="My photo" style="width:128px;height:128px;">
 
