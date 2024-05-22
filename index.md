@@ -3,10 +3,8 @@ title: "About me"
 layout: page
 ---
 
-<link rel="stylesheet" type="text/css" href="index.css" media=”screen” />
-
   
-<img align="left" src="/images/Image 1.jpeg" alt="My photo" style="width:256px;height:268px;" id="myph" margin-right: 1em;>
+<img align="left" src="/images/Image 1.jpeg" alt="My photo" style="width:256px;height:268px;" id="myph">
 
 Hi, I am a PhD student at the Institute of Science and Technology Austria (ISTA) co-affiliated with [Medical Genomics group](https://ist.ac.at/en/research/robinson-group/) led by Prof. Matthew Robinson and [Data Science, Machine Learning, and Information Theory group](https://ist.ac.at/en/research/mondelli-group/) led by Prof. [Marco Mondelli](http://marcomondelli.com/index.html).
 
