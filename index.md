@@ -15,3 +15,12 @@ I am a PhD student at IST Austria working in the intersection between mathematic
 
 My hobbies include hiking and running, also when I have time I try to volunteer by preparing and giving lectures in competitive mathematics to gifted students from my old high-school and at MNM summer
 camps.
+
+
+# Latest updates
+
+* Bullet 1
+* Bullet 2
+  * Bullet 2a
+  * Bullet 2b
+* Bullet 3
