@@ -1,10 +1,8 @@
 ---
 title: "gVAMP"
 permalink: "/gvamp/"
-layout: default
+layout: page
 ---
-
-$$\sum\limits_{i=0}^n i^2$$
 
 ## Table of contents
 
