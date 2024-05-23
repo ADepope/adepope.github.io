@@ -20,8 +20,7 @@ camps.
 
 ## Latest updates
 
-* ___April 2024:___ I presented our paper 'Inference of Genetic Effects via Approximate Message Passing' at 2024 IEEE International Conference on Acoustics, Speech, and Signal Processing ([ICASSP24](https://2024.ieeeicassp.org)). The slides can be found here. 
-* Bullet 2
-  * Bullet 2a
-  * Bullet 2b
-* Bullet 3
+* ___April 2024:___ I presented our paper 'Inference of Genetic Effects via Approximate Message Passing' at 2024 IEEE International Conference on Acoustics, Speech, and Signal Processing ([ICASSP24](https://2024.ieeeicassp.org)). The slides can be found here.
+* ___April 2024:___ Best presentation award at 52nd European Mathematical Genetics Meeting held in Vienna
+* ___March 2024:___ Second version of our preprint 'Light-speed whole genome association testing and prediction via Approximate Message Passing' is published on BioArxiv.
+
