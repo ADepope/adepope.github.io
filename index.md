@@ -20,7 +20,7 @@ camps.
 
 ## Latest updates
 
-* Bullet 1
+** <em> April 2024: </em> I presented our paper 'Inference of Genetic Effects via Approximate Message Passing' at 2024 IEEE International Conference on Acoustics, Speech, and Signal Processing ([ICASSP24](https://2024.ieeeicassp.org)). The slides can be found here. 
 * Bullet 2
   * Bullet 2a
   * Bullet 2b
