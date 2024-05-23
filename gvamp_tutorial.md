@@ -19,7 +19,7 @@ This tutorial will cover the following topics:
 
 Bayesian linear regression is the most widely used model interpretable model for high-dimensional inference in life sciences, and it allows for information on the signal structure to be incorporated in the inference process. We wish to estimate the high-dimensional 
 signal vector $$\mathbf{\beta}\in \mathbb{R}^P$$ from a vector of phenotype measurements $\mathbf{y} \in \mathbb{R}^N$ given by the following linear relationship: 
-\Large y_i = \langle \mathbf{x}_i, \mathbf{\beta}  \rangle + \epsilon_i, \quad  \text{ for } i\in \{1,  \ldots, N\}. 
+$$\Large y_i = \langle \mathbf{x}_i, \mathbf{\beta}  \rangle + \epsilon_i, \quad  \text{ for } i\in \{1,  \ldots, N\}.$$
 
 
 Here, $\mathbf{x}_i$ is a row vector of the normalized genotype matrix $\mathbf{X}$, $`\langle \mathbf{x}_i, \mathbf{\beta}  \rangle = \mathbf{x}_i^T \mathbf{\beta}`$ denotes the Euclidean inner product, and $\mathbf{\epsilon} = (\epsilon_1, \ldots, \epsilon_N)$ is an unknown noise vector that is assumed to follow the multivariate normal distribution 
