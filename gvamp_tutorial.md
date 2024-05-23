@@ -1,12 +1,12 @@
 ---
-title: "gVAMP"
+title: "A short genomic VAMP (gVAMP) tutorial "
 permalink: "/gvamp/"
 layout: page
 ---
 
 ## Table of contents
 
-In this Wiki page we give a short tutorial on:
+This tutorial will cover the following topics:
 
 **1. downloading gVAMP code from Git repository** <br />
 **2. compiling gVAMP code in the HPC (High-Performance Computing) environment** <br />
