@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Light-speed inference of genetic effects via Approximate Message Passing
+title: Incorporating summary statistics into VAMP framework
 authors: Al Depope
-year: In Progress
+year: 2024
 ---
 
 
