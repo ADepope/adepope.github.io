@@ -3,7 +3,7 @@ layout: page
 title: Projects
 ---
 
-<h1 class="mt-4">Publications</h1>
+<h1 class="mt-4"></h1>
 {% assign publications = site.publications | sort: "year" | reverse %}
 {% for pub in publications %}
 <div class="pubitem">
@@ -16,11 +16,11 @@ title: Projects
     {{ pub.title }}
   </div>
   <div class="pubauthors">
-    {{ pub.authors }}
+    {{ pub.authors }}, {{ pub.year}}
   </div>
-  <div class="pubinfo">
+<!--   <div class="pubinfo">
     {{ pub.publication }}, {{ pub.year}}
-  </div>
+  </div> -->
   <div class="publinks">
     <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
     <a href="{{pub.url}}"><i class="fas fa-arrow-right"></i> Project Page</a>
