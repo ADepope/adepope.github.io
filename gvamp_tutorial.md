@@ -27,11 +27,11 @@ Here, $$\mathbf{x}_i$$ is a row vector of the normalized genotype matrix $$\math
 
 $$\Large \mathbf{\epsilon} \sim \mathcal N(0, \gamma_{\epsilon}^{-1} \cdot {\mathbf{I}}_N)$$ 
 
-with unknown noise precision parameter $\gamma_{\epsilon}^{-1}$. To allow for a range of genetic effects, from heavy-tail distributions to sparse ones, we model the prior on the signal $\mathbf{\beta}$ to be of a spike-and-slab form. Namely, for $i=1, \dots, P$, we use mixture of Gaussian distributions to model the slab component. Namely, 
+with unknown noise precision parameter $$\gamma_{\epsilon}^{-1}$$. To allow for a range of genetic effects, from heavy-tail distributions to sparse ones, we model the prior on the signal $$\mathbf{\beta}$$ to be of a spike-and-slab form. Namely, for $$i=1, \dots, P$$, we use mixture of Gaussian distributions to model the slab component. Namely, 
 
 $$\Large\beta_i \sim (1-\lambda) \cdot \delta_0(\cdot) + \lambda \cdot \sum^{L}_{i=1} \pi_i \cdot \mathcal{N}(\cdot, 0, \sigma_i^2).$$
 
-The gVAMP is an iterative procedure consisting of two steps: (i) denoising, and (ii) linear minimum mean square error estimation (LMMSE). The denoising step accounts for the prior structure given a noisy estimate of the signal $\mathbf{\beta}$, while the LMMSE step utilizes phenotype values to further refine the estimate. The key feature of EM-VAMP is in the so called _Onsager correction_: this is added to ensure the asymptotic normality of the noise corrupting the estimates of $\mathbf{\beta}$ given by the algorithm at every iteration. This property then -- together with an estimate of noise precision also obtained from the algorithm -- allows a precise performance analysis via _state evolution_ and, consequently, the optimization of the denoisers. Schematically, the inference procedure can be summarized as follows:
+The gVAMP is an iterative procedure consisting of two steps: (i) denoising, and (ii) linear minimum mean square error estimation (LMMSE). The denoising step accounts for the prior structure given a noisy estimate of the signal $$\mathbf{\beta}$$, while the LMMSE step utilizes phenotype values to further refine the estimate. The key feature of EM-VAMP is in the so called _Onsager correction_: this is added to ensure the asymptotic normality of the noise corrupting the estimates of $$\mathbf{\beta}$$ given by the algorithm at every iteration. This property then -- together with an estimate of noise precision also obtained from the algorithm -- allows a precise performance analysis via _state evolution_ and, consequently, the optimization of the denoisers. Schematically, the inference procedure can be summarized as follows:
 
 ```mermaid
 graph TD;
