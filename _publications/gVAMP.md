@@ -3,6 +3,7 @@ layout: page
 title: Light-speed inference of genetic effects via Approximate Message Passing
 authors: Al Depope, Marco Mondelli and Matthew R. Robinson
 year: 2024
+pdf: true
 ---
 
 ## Abstract
