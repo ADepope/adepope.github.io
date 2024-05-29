@@ -3,6 +3,22 @@ layout: page
 title: Projects
 ---
 
+<style>
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.pubteaser img {
+  width: 100px;
+  border: 1px solid black;
+}
+</style>
+
 <h1 class="mt-4"></h1>
 {% assign publications = site.publications | sort: "year" | reverse %}
 {% for pub in publications %}
