@@ -22,7 +22,9 @@ layout: default
 
   <h2 id="downloads">Downloads</h2>
   <p>
+    {% if page.pdf %}
     <a href="/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+    {% endif %}
     {% if page.slides %}
     <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
     {% endif %}
