@@ -3,6 +3,7 @@ layout: default
 title: Incorporating summary statistics into VAMP framework
 authors: Al Depope
 year: 2024
+pdf: false
 ---
 
 
