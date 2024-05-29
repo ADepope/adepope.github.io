@@ -7,7 +7,7 @@ title: Projects
 {% assign publications = site.publications | sort: "year" | reverse %}
 {% for pub in publications %}
 <div class="pubitem">
-  <div class="pubteaser">
+  <div align="left" class="pubteaser">
     <a href="{{pub.url}}">
       <img src="/images/{{ pub.slug }}_small.jpg" style="width:256px;height:256px;" alt="{{pub.slug}} project teaser"/>
     </a>
