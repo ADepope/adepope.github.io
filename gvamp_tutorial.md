@@ -22,7 +22,7 @@ signal vector $$\mathbf{\beta}\in \mathbb{R}^P$$ from a vector of phenotype meas
 $$\Large y_i = \langle \mathbf{x}_i, \mathbf{\beta}  \rangle + \epsilon_i, \quad  \text{ for } i\in \{1,  \ldots, N\}.$$
 
 
-Here, $\mathbf{x}_i$ is a row vector of the normalized genotype matrix $\mathbf{X}$, $`\langle \mathbf{x}_i, \mathbf{\beta}  \rangle = \mathbf{x}_i^T \mathbf{\beta}`$ denotes the Euclidean inner product, and $\mathbf{\epsilon} = (\epsilon_1, \ldots, \epsilon_N)$ is an unknown noise vector that is assumed to follow the multivariate normal distribution 
+Here, $$\mathbf{x}_i$$ is a row vector of the normalized genotype matrix $$\mathbf{X}$$, $$`\langle \mathbf{x}_i, \mathbf{\beta}  \rangle = \mathbf{x}_i^T \mathbf{\beta}`$$ denotes the Euclidean inner product, and $$\mathbf{\epsilon} = (\epsilon_1, \ldots, \epsilon_N)$$ is an unknown noise vector that is assumed to follow the multivariate normal distribution 
 $$\Large \mathbf{\epsilon} \sim \mathcal N(0, \gamma_{\epsilon}^{-1} \cdot {\mathbf{I}}_N)$$ 
 
 with unknown noise precision parameter $\gamma_{\epsilon}^{-1}$. To allow for a range of genetic effects, from heavy-tail distributions to sparse ones, we model the prior on the signal $\mathbf{\beta}$ to be of a spike-and-slab form. Namely, for $i=1, \dots, P$, we use mixture of Gaussian distributions to model the slab component. Namely, 
