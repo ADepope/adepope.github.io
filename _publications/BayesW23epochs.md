@@ -4,6 +4,7 @@ title: Detection of age-specific genetic effects for age-at-onset complex traits
 authors: Sven Erik Ojavee and Al Depope
 year: 2020
 slides: false
+pdf: true
 ---
 
 ## Abstract
