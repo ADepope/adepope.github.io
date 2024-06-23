@@ -20,7 +20,7 @@ camps.
 
 ## Latest updates
 
-* ___June 2024:___ Our work extending the gVAMP framework with application to whole-genome sequence data analysis of human heigh trait has been accepted for an oral presentation at [7th International Conference of Quantitative Genetics](https://icqg2024.pages.ist.ac.at). Additionally, our work on summary statistics version of gVAMP was accepted in a poster format and will be presented by Jakub Bajzik.
+* ___June 2024:___ Our work extending the gVAMP framework with application to whole-genome sequence data analysis of human heigh trait has been accepted for an oral presentation at [7th International Conference of Quantitative Genetics](https://icqg2024.pages.ist.ac.at). Additionally, our work on summary statistics version of gVAMP was accepted for a presentation in a poster format and will be presented by Jakub Bajzik.
 * ___April 2024:___ I presented our paper 'Inference of Genetic Effects via Approximate Message Passing' at 2024 IEEE International Conference on Acoustics, Speech, and Signal Processing ([ICASSP24](https://2024.ieeeicassp.org)). The slides can be found <a href="/download/ICASSP24_presentation_web.pdf"><i class="far fa-file-pdf"></i>here</a>..
 * ___April 2024:___ Best student presentation award at [52nd European Mathematical Genetics Meeting](https://emgm2024.ista.ac.at) held in Vienna. The slides can be found <a href="/download/EMGM24_presentation.pdf"><i class="far fa-file-pdf"></i>here</a>.
 * ___March 2024:___ Second version of our preprint 'Light-speed whole genome association testing and prediction via Approximate Message Passing' is published on [BioArxiv](https://www.biorxiv.org/content/10.1101/2023.09.14.557703v2).
