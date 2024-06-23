@@ -5,6 +5,7 @@ authors: Jakub Bajzik, Al Depope, Daniel L. McCartney, Markus J. Bauer, Riccardo
 publication: 
 year: 2024
 pdf: false
+summary: We develop and apply an approximate message passing-based paradigm called gVAMPomi to the largest human methylation dataset generated to date, the Generation Scotland study, and find 92 CpG probes whose effects are significantly associated with traits, conditional on all other CpG probes, representing a significant increase over 37 CpG probes discovered by baseline MCMC approach.
 ---
 
 
