@@ -5,6 +5,7 @@ authors: Sven Erik Ojavee and Al Depope
 year: 2020
 slides: false
 pdf: true
+summary: We develop an extension of the time-to-event MCMC software called BayesW to two and three epochs by imposing statistical model and deriving Gibbs updates for interaction parameters and epoch-specific parameters.
 ---
 
 ## Abstract
