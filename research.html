@@ -51,6 +51,11 @@ title: Projects
   <div class="pubauthors">
     {{ pub.authors }}
   </div>
+  {% if pub.summary %}
+    <div class="pubauthors">
+    {{ pub.summary }}
+   </div>
+  {% endif %}
 <!--   <div class="pubinfo">
     {{ pub.publication }}, {{ pub.year}}
   </div> -->
