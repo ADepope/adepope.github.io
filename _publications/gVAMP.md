@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Light-speed inference of genetic effects via Approximate Message Passing
-authors: Al Depope, Marco Mondelli and Matthew R. Robinson
+authors: Al Depope, Jakub Bajzik, Marco Mondelli and Matthew R. Robinson
 summary: We develop a new algorithmic paradigm, based on Approximate Message Passing (AMP), specifically tailored for both genomic prediction and association testing. Our gVAMP (genomic Vector AMP) approach requires less than a day to jointly estimate the effects of 8.4 million imputed genetic variants in over 400,000 UK Biobank participants, and it provides an association testing framework capable of directly fine-mapping each genetic variant, or gene burden score, conditional on all other measured DNA variation genome-wide. 
 year: 2024
 pdf: true
