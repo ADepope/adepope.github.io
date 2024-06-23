@@ -13,7 +13,7 @@ Prior to my current studies, I obtained a Bachelor degree in Mathematics and Mas
 
 My research interests lie at the intersection of mathematically grounded ML, numerical mathematics, software development and genetics applications.
 
-My hobbies include hiking and running, also when I have time I try to volunteer by preparing and giving lectures in competitive mathematics to gifted students from my old high-school and at [MNM](https://mnm.hr) summer
+My hobbies include hiking and running, also when I have time I try to volunteer by preparing and giving lectures in competitive mathematics to gifted students from my [old high-school](http://www.gimnazija-amohorovicica-ri.skole.hr) and at [MNM](https://mnm.hr) summer
 camps.
 
 <br /> 
