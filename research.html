@@ -20,12 +20,19 @@ description: "Research projects by Al Depope: approximate message passing for ge
 <ul class="project-list">
 {% for pub in publications %}
   {% if pub.teaser %}{% assign thumb = pub.teaser %}{% else %}{% assign thumb = pub.slug | append: "_small.jpg" %}{% endif %}
+  {% if pub.abstract == false %}{% assign target = pub.code | default: pub.doi %}{% else %}{% assign target = pub.url | relative_url %}{% endif %}
   <li class="project">
-    <a class="project-thumb" href="{{ pub.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {% if target %}
+    <a class="project-thumb" href="{{ target }}" tabindex="-1" aria-hidden="true">
       <img src="{{ "/images/" | append: thumb | relative_url }}" alt="" loading="lazy" width="256" height="256">
     </a>
+    {% else %}
+    <span class="project-thumb">
+      <img src="{{ "/images/" | append: thumb | relative_url }}" alt="" loading="lazy" width="256" height="256">
+    </span>
+    {% endif %}
     <div class="project-body">
-      <p class="project-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></p>
+      <p class="project-title">{% if target %}<a href="{{ target }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
       <p class="project-authors">{{ pub.authors }}{% if pub.status %} &middot; <span style="color:var(--accent);font-weight:700">{{ pub.status }}</span>{% endif %}</p>
       <p class="project-summary">{{ pub.summary }}</p>
       <div class="link-row">
@@ -33,7 +40,7 @@ description: "Research projects by Al Depope: approximate message passing for ge
         {% if pub.preprint %}<a href="{{ pub.preprint }}">{% include icon.html name="file-alt" %} Preprint</a>{% endif %}
         {% if pub.pdf %}<a href="{{ "/download/" | append: pub.slug | append: ".pdf" | relative_url }}">{% include icon.html name="file-pdf" %} PDF</a>{% endif %}
         {% if pub.code %}<a href="{{ pub.code }}">{% include icon.html name="github" %} Code</a>{% endif %}
-        <a href="{{ pub.url | relative_url }}">{% include icon.html name="arrow-right" %} Full abstract</a>
+        {% unless pub.abstract == false %}<a href="{{ pub.url | relative_url }}">{% include icon.html name="arrow-right" %} Full abstract</a>{% endunless %}
       </div>
     </div>
   </li>
@@ -42,6 +49,6 @@ description: "Research projects by Al Depope: approximate message passing for ge
 
 <h2 id="collaborations">Beyond genomics</h2>
 
-<p>Good statistics travels. I work with the <a href="https://www.tuwien.at/en/">TU Wien</a> Textile Recycling Group on the experimental design, statistical analysis and data visualisation behind their solvent-based recycling processes &mdash; two joint papers so far in <em>Waste Management</em>, listed on the <a href="{{ "/publications/" | relative_url }}">publications page</a>.</p>
+<p>I work with the <a href="https://www.tuwien.at/en/">TU Wien</a> Textile Recycling Group on the experimental design, statistical analysis and data visualisation behind their solvent-based recycling processes &mdash; two joint papers so far in <em>Waste Management</em>, listed on the <a href="{{ "/publications/" | relative_url }}">publications page</a>.</p>
 
 <p>During a machine learning and privacy internship at the University of Vienna I built a modular library for benchmarking <a href="https://github.com/ADepope/modular-Lan-MIA">membership inference attacks on large language models</a>, together with a document-level differential privacy auditing framework.</p>

@@ -5,6 +5,7 @@ authors: Al Depope, Marco Mondelli and Matthew R. Robinson
 year: 2026
 order: 60
 pdf: false
+abstract: false
 teaser: TLgVAMP_small.svg
 status: Work in progress
 code: https://github.com/ADepope/TLgVAMP
