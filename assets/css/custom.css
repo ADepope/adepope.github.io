@@ -799,35 +799,51 @@ body > footer nav a:hover .icon { color: inherit !important; }
 
 /* ---------- 11b. Photo grid ------------------------------------------ */
 
+/* Four across on desktop: one tidy row rather than 3 + an orphan, and each
+   tile stays small enough to read as a thumbnail strip. */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
   list-style: none;
-  margin: 1.75rem 0 0;
+  margin: 1.5rem 0 0;
   padding: 0;
 }
 
-.photo { margin: 0; display: flex; flex-direction: column; gap: .45rem; }
+.photo { margin: 0; display: flex; flex-direction: column; gap: .4rem; min-width: 0; }
 
 .photo img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: var(--radius);
+  border-radius: 8px;
   border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
   display: block;
   margin: 0;
-  transition: transform .25s ease, box-shadow .25s ease;
+  filter: saturate(.96);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
 }
 
-.photo img:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.photo img:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  filter: saturate(1.05);
+}
 
-.photo-caption { color: var(--fg-faint); font-size: .84rem; line-height: 1.45; }
+.photo-caption {
+  color: var(--fg-faint);
+  font-size: .76rem;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+@media (max-width: 48em) {
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+  .photo-caption { font-size: .8rem; }
+}
 
 /* a lone photo should not stretch across the full width */
-.photo-grid:has(> .photo:only-child) { grid-template-columns: minmax(0, 26rem); }
+.photo-grid:has(> .photo:only-child) { grid-template-columns: minmax(0, 22rem); }
 
 /* ---------- 12. Misc ------------------------------------------------- */
 

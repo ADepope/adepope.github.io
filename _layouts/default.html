@@ -30,12 +30,18 @@
   })();
 </script>
 
+{%- comment -%}
+  Cache buster: GitHub Pages serves CSS with max-age=600, so without this a
+  stylesheet change leaves visitors on the old file for up to ten minutes and
+  unstyled markup shows through. site.time changes on every build.
+{%- endcomment -%}
+{%- assign css_v = site.time | date: "%Y%m%d%H%M%S" -%}
 {% if site.show_frame %}
-<link rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}?v={{ css_v }}">
 {% else %}
-<link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}?v={{ css_v }}">
 {% endif %}
-<link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}?v={{ css_v }}">
 {% if site.plugins contains "jekyll-feed" %}<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">{% endif %}
 {% if page.mathjax or site.mathjax %}
 <link rel="stylesheet" href="{{ "/assets/katex/katex.min.css" | relative_url }}">
