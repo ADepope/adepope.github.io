@@ -92,10 +92,6 @@ Before ISTA I obtained a BSc in Mathematics and an MSc in Mathematical Statistic
 
 <ul class="timeline">
   <li class="is-new">
-    <time datetime="2026-09">September 2026</time>
-    <p>Our second paper with the <a href="https://www.tuwien.at/en/">TU Wien</a> Textile Recycling Group, on deep eutectic solvent formulations for recycling elastane-containing textile waste, appears in <em>Waste Management</em>. <a href="https://doi.org/10.1016/j.wasman.2026.115736">[DOI]</a></p>
-  </li>
-  <li class="is-new">
     <time datetime="2026-07">July 2026</time>
     <p>I completed my PhD at ISTA and started as a Postdoctoral Researcher in the same institute, continuing to develop <a href="https://github.com/ADepope/TLgVAMP">TLgVAMP</a>, a transfer-learning framework for cross-ancestry polygenic risk scores.</p>
   </li>
