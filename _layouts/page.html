@@ -2,8 +2,8 @@
 layout: default
 ---
 <article>
+  {% unless page.hide_title %}
   <header><h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1></header>
+  {% endunless %}
   {{ content }}
 </article>
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

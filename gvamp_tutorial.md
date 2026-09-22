@@ -2,6 +2,8 @@
 title: "A short genomic VAMP (gVAMP) tutorial "
 permalink: "/gvamp/"
 layout: page
+mathjax: true
+description: "A hands-on tutorial for gVAMP: compiling on HPC, Bayesian linear model inference, LOO/LOCO p-values, prediction accuracy and running on DNAnexus."
 ---
 
 ## Table of contents
@@ -23,7 +25,7 @@ signal vector $$\mathbf{\beta}\in \mathbb{R}^P$$ from a vector of phenotype meas
 $$\Large y_i = \langle \mathbf{x}_i, \mathbf{\beta}  \rangle + \epsilon_i, \quad  \text{ for } i\in \{1,  \ldots, N\}.$$
 
 
-Here, $$\mathbf{x}_i$$ is a row vector of the normalized genotype matrix $$\mathbf{X}$$, $$`\langle \mathbf{x}_i, \mathbf{\beta}  \rangle = \mathbf{x}_i^T \mathbf{\beta}`$$ denotes the Euclidean inner product, and $$\mathbf{\epsilon} = (\epsilon_1, \ldots, \epsilon_N)$$ is an unknown noise vector that is assumed to follow the multivariate normal distribution 
+Here, $$\mathbf{x}_i$$ is a row vector of the normalized genotype matrix $$\mathbf{X}$$, $$\langle \mathbf{x}_i, \mathbf{\beta}  \rangle = \mathbf{x}_i^T \mathbf{\beta}$$ denotes the Euclidean inner product, and $$\mathbf{\epsilon} = (\epsilon_1, \ldots, \epsilon_N)$$ is an unknown noise vector that is assumed to follow the multivariate normal distribution 
 
 $$\Large \mathbf{\epsilon} \sim \mathcal N(0, \gamma_{\epsilon}^{-1} \cdot {\mathbf{I}}_N)$$ 
 

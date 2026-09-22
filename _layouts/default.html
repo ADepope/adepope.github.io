@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-<meta charset="{{ site.encoding }}">
+<meta charset="{{ site.encoding | default: "utf-8" }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+
+{%- assign page_desc = page.description | default: site.tagline | default: site.title -%}
+<meta name="description" content="{{ page_desc | strip_html | normalize_whitespace | escape }}">
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+<meta name="theme-color" content="#0d2137">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="icon" href="{{ "/assets/favicon.svg" | relative_url }}" type="image/svg+xml">
+
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}">
+<meta property="og:description" content="{{ page_desc | strip_html | normalize_whitespace | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ site.portrait | absolute_url }}">
+<meta name="twitter:card" content="summary">
+
+<script>
+  // Applied before first paint so the chosen theme never flashes.
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+
 {% if site.show_frame %}
 <link rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}">
 {% else %}
 <link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
 {% endif %}
+<link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
 {% if site.plugins contains "jekyll-feed" %}<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">{% endif %}
 {% if page.mathjax or site.mathjax %}
 <link rel="stylesheet" href="{{ "/assets/katex/katex.min.css" | relative_url }}">
 <script defer src="{{ "/assets/katex/katex.min.js" | relative_url }}"></script>
-<script defer src="{{ "/assets/katex/contrib/auto-render.min.js" | relative_url }}" onload="renderMathInElement(document.body)"></script>
+<script defer src="{{ "/assets/katex/contrib/mathtex-script-type.min.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/katex/contrib/auto-render.min.js" | relative_url }}" onload="renderMathInElement(document.body, {
+  delimiters: [
+    {left: '$$', right: '$$', display: true},
+    {left: '\\[', right: '\\]', display: true},
+    {left: '\\(', right: '\\)', display: false}
+  ],
+  ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'option'],
+  throwOnError: false
+})"></script>
 {% endif %}
 {% if site.comments.disqus_shortname and page.layout == "post" %}<script src="//{{ site.comments.disqus_shortname }}.disqus.com/embed.js" async></script>{% endif %}
 {% if site.comments.isso_domain and page.layout == "post" %}<script data-isso="http://{{ site.comments.isso_domain }}" src="//{{ site.comments.isso_domain }}/js/embed.min.js"></script>{% endif %}
@@ -27,18 +61,47 @@
   {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
 {% endif %}
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header>
   <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
-  {% include menu.html menu=pages %}
+  <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.25rem">
+    {% include menu.html menu=pages %}
+    <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch between light and dark theme" title="Switch theme">
+      <svg class="icon sun" aria-hidden="true" viewBox="0 0 512 512" width="14" height="14"><path d="M256 160a96 96 0 1 0 0 192 96 96 0 1 0 0-192zm0 152a56 56 0 1 1 0-112 56 56 0 1 1 0 112zM236 0h40v76h-40zm0 436h40v76h-40zM0 236h76v40H0zm436 0h76v40h-76zM60.6 88.9l28.3-28.3 53.7 53.7-28.3 28.3zm308.8 308.8l28.3-28.3 53.7 53.7-28.3 28.3zM114.3 369.4l28.3 28.3-53.7 53.7-28.3-28.3zm308.8-308.8l28.3 28.3-53.7 53.7-28.3-28.3z"/></svg>
+      <svg class="icon moon" aria-hidden="true" viewBox="0 0 512 512" width="14" height="14"><path d="M283 512c-141 0-256-115-256-256C27 141 105 40 216 11c17-4 32 13 25 29-14 32-22 67-22 103 0 138 112 250 250 250 10 0 20-1 30-2 17-2 28 18 17 31-56 59-134 90-233 90zm-98-450C114 96 67 171 67 256c0 119 96 216 216 216 60 0 116-15 160-52-142-2-256-118-256-260 0-34 6-67 17-98z"/></svg>
+    </button>
+  </div>
 </header>
+
+<a id="main" class="visually-hidden" tabindex="-1"></a>
 
 {{ content }}
 
-{% if site.external %}
 <footer>
-  <div>{{ site.description | default: site.title }}</div>
-  {% include menu.html menu=site.external %}
+  <div class="footer-note">
+    <strong>{{ site.author | escape }}</strong>
+    <small>{{ site.tagline | default: site.description | strip_html | escape }}</small>
+    <small>&copy; {{ site.time | date: "%Y" }} &middot; Built with <a href="https://jekyllrb.com/">Jekyll</a> &amp; the <a href="https://github.com/niklasbuschmann/contrast">Contrast</a> theme</small>
+  </div>
+  {% if site.external %}{% include menu.html menu=site.external %}{% endif %}
 </footer>
-{% endif %}
+
+<script>
+  (function () {
+    var btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var root = document.documentElement;
+      var current = root.getAttribute("data-theme");
+      if (!current) {
+        current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      var next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  })();
+</script>
 
 </html>

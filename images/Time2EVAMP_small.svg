@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img"
+     aria-label="Schematic of survival curves with censoring marks and selected proteomic biomarkers">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d2a4f"/><stop offset="1" stop-color="#071a33"/>
+    </linearGradient>
+    <linearGradient id="fill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5f9de0" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#5f9de0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg2)"/>
+
+  <g stroke="#9dc2ee" stroke-width="1" opacity="0.16">
+    <path d="M64 120 H464 M64 200 H464 M64 280 H464 M64 360 H464"/>
+  </g>
+
+  <!-- axes -->
+  <path d="M64 88 V416 H464" stroke="#7fa8d8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- survival curve, high-risk group -->
+  <path d="M64 416 L64 120 L112 120 L112 156 L160 156 L160 208 L208 208 L208 252 L256 252
+           L256 300 L304 300 L304 336 L352 336 L352 364 L400 364 L400 382 L456 382 L456 416 Z"
+        fill="url(#fill1)"/>
+  <path d="M64 120 L112 120 L112 156 L160 156 L160 208 L208 208 L208 252 L256 252
+           L256 300 L304 300 L304 336 L352 336 L352 364 L400 364 L400 382 L456 382"
+        stroke="#7fc0ff" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- survival curve, low-risk group -->
+  <path d="M64 120 L136 120 L136 140 L208 140 L208 168 L280 168 L280 190 L352 190 L352 214 L456 214"
+        stroke="#f0a53f" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"
+        stroke-dasharray="1 0"/>
+
+  <!-- censoring ticks -->
+  <g stroke="#d8e6f7" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <path d="M136 148 v14"/><path d="M232 200 v14"/><path d="M328 328 v14"/><path d="M416 374 v14"/>
+    <path d="M184 132 v14"/><path d="M312 182 v14"/>
+  </g>
+
+  <text x="64" y="72" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#9dc2ee">S(t)</text>
+  <text x="456" y="452" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#9dc2ee">time to onset</text>
+
+  <circle cx="404" cy="130" r="7" fill="#7fc0ff"/>
+  <text x="420" y="137" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="#cfe2f8" text-anchor="end" dx="-16">high risk</text>
+  <circle cx="404" cy="162" r="7" fill="#f0a53f"/>
+  <text x="420" y="169" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="#f3d2a5" text-anchor="end" dx="-16">low risk</text>
+
+  <text x="64" y="492" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="700"
+        fill="#ffffff" opacity="0.92" letter-spacing="1">vampW</text>
+</svg>

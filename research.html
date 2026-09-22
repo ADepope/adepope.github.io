@@ -1,83 +1,47 @@
 ---
 layout: page
-title: Projects
+title: Research
+description: "Research projects by Al Depope: approximate message passing for genomics, cross-ancestry polygenic risk scores, proteomic survival models and epigenome-wide association studies."
 ---
 
-<style>
+<p class="lede">I develop Bayesian inference procedures for problems where the number of variables runs into the millions &mdash; and then make them fast enough to actually run on biobank-scale data. Most of this work builds on <strong>approximate message passing</strong>, a family of iterative algorithms that comes with exact asymptotic guarantees through state evolution, which in turn gives calibrated uncertainty and principled significance testing.</p>
 
-html body {
-  /* We include the default font stack as a fallback */
-  font-family: "Noto Sans", "Noto CJK", sans-serif;
-}
-  
-.pubteaser {
-  clear: both;
-}
+<ul class="tag-row">
+  <li class="tag">Genome-wide association studies</li>
+  <li class="tag">Polygenic risk scores</li>
+  <li class="tag">Epigenomics</li>
+  <li class="tag">Proteomics</li>
+  <li class="tag">Time-to-event models</li>
+</ul>
 
-.pubteaser a {
-  float: left;
-  margin-right: 2em;
-}
+<h2 id="projects">Projects</h2>
 
-.pubteaser img {
-  width: 100px;
-  border: 1px solid black;
-}
-
-.pubitem {
-  margin: 2em 0;
-  line-height: 1em;
-}
-
-.pubtitle {
-  margin-bottom: 0.5em;
-  line-height: 1.2em;
-  font-weight: bold;
-  font-size: 125%;
-}
-
-.pubauthors,
-.pubinfo {
-  font-size: 100%;
-  margin-bottom: 0.75em;
-}
-
-.pubsummary {
-  font-size: 100%;
-  line-height: 1.2em;
-  margin-bottom: 0.75em;
-}
-</style>
-
-<h1 class="mt-4"></h1>
-{% assign publications = site.publications | sort: "year" | reverse %}
+{% assign publications = site.publications | sort: "order" | reverse %}
+<ul class="project-list">
 {% for pub in publications %}
-<div class="pubitem">
-  <div class="pubteaser">
-    <a href="{{pub.url}}">
-      <img src="/images/{{ pub.slug }}_small.jpg" style="width:256px;height:256px;" alt="{{pub.slug}} project teaser"/>
+  {% if pub.teaser %}{% assign thumb = pub.teaser %}{% else %}{% assign thumb = pub.slug | append: "_small.jpg" %}{% endif %}
+  <li class="project">
+    <a class="project-thumb" href="{{ pub.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ "/images/" | append: thumb | relative_url }}" alt="" loading="lazy" width="256" height="256">
     </a>
-  </div>
-  <div class="pubtitle">
-    {{ pub.title }}
-  </div>
-  <div class="pubauthors">
-    {{ pub.authors }}
-  </div>
-  <div class="pubsummary">
-    {{ pub.summary }}
-  </div>
-<!--   <div class="pubinfo">
-    {{ pub.publication }}, {{ pub.year}}
-  </div> -->
-  <div class="publinks">
-    {% if pub.pdf %}
-    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-    {% endif %}
-    <a href="{{pub.url}}"><i class="fas fa-arrow-right"></i> Full Abstract </a>
-  </div>
-</div>
-<!-- <hr> -->
+    <div class="project-body">
+      <p class="project-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></p>
+      <p class="project-authors">{{ pub.authors }}{% if pub.status %} &middot; <span style="color:var(--accent);font-weight:700">{{ pub.status }}</span>{% endif %}</p>
+      <p class="project-summary">{{ pub.summary }}</p>
+      <div class="link-row">
+        {% if pub.doi %}<a href="{{ pub.doi }}">{% include icon.html name="external-link-alt" %} Paper</a>{% endif %}
+        {% if pub.preprint %}<a href="{{ pub.preprint }}">{% include icon.html name="file-alt" %} Preprint</a>{% endif %}
+        {% if pub.pdf %}<a href="{{ "/download/" | append: pub.slug | append: ".pdf" | relative_url }}">{% include icon.html name="file-pdf" %} PDF</a>{% endif %}
+        {% if pub.code %}<a href="{{ pub.code }}">{% include icon.html name="github" %} Code</a>{% endif %}
+        <a href="{{ pub.url | relative_url }}">{% include icon.html name="arrow-right" %} Full abstract</a>
+      </div>
+    </div>
+  </li>
 {% endfor %}
+</ul>
 
+<h2 id="collaborations">Beyond genomics</h2>
 
+<p>Good statistics travels. I work with the <a href="https://www.tuwien.at/en/">TU Wien</a> Textile Recycling Group on the experimental design, statistical analysis and data visualisation behind their solvent-based recycling processes &mdash; two joint papers so far in <em>Waste Management</em>, listed on the <a href="{{ "/publications/" | relative_url }}">publications page</a>.</p>
+
+<p>During a machine learning and privacy internship at the University of Vienna I built a modular library for benchmarking <a href="https://github.com/ADepope/modular-Lan-MIA">membership inference attacks on large language models</a>, together with a document-level differential privacy auditing framework.</p>

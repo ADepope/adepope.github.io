@@ -1,0 +1,155 @@
+---
+title: "Curriculum Vitae"
+layout: page
+description: "Curriculum vitae of Al Depope, PhD — Postdoctoral Researcher at ISTA."
+---
+
+<p class="lede">Postdoctoral Researcher in statistical genetics and machine learning at ISTA. Croatian EU citizen.</p>
+
+<div class="hero-links" style="margin-bottom:1.5rem">
+  {% if site.cv_pdf and site.cv_pdf != "" %}
+  <a class="pill-link is-primary" href="{{ site.cv_pdf | relative_url }}">{% include icon.html name="download" %} Download PDF</a>
+  {% endif %}
+  {% if site.cv_tex and site.cv_tex != "" %}
+  <a class="pill-link" href="{{ site.cv_tex | relative_url }}">{% include icon.html name="file-alt" %} LaTeX source</a>
+  {% endif %}
+  <a class="pill-link" href="mailto:{{ site.email }}">{% include icon.html name="envelope" %} {{ site.email }}</a>
+  <a class="pill-link" href="https://orcid.org/{{ site.orcid }}">{% include icon.html name="orcid" %} ORCID</a>
+</div>
+
+<h2 id="profile">Profile</h2>
+
+<p>I develop mathematically grounded machine learning for genomics: Bayesian models and inference procedures that improve biomarker selection and individual risk prediction, combined with the high-performance computing (C++, CUDA, distributed systems) and data analysis (Python, R) needed to run them at biobank scale. I am looking for a computational biology position where this work turns into tools with real-world impact.</p>
+
+<h2 id="experience">Experience</h2>
+
+<div class="cv-entry">
+  <div class="cv-when">Jul 2026 &ndash; present</div>
+  <div class="cv-what">
+    <h3>Postdoctoral Researcher</h3>
+    <p class="cv-where">Institute of Science and Technology Austria (ISTA) &middot; Klosterneuburg, Austria</p>
+    <p>Extending my doctoral work by developing <a href="https://github.com/ADepope/TLgVAMP">TLgVAMP</a>, a transfer-learning framework for improved cross-ancestry polygenic risk scores.</p>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-when">Sep 2020 &ndash; Jul 2026</div>
+  <div class="cv-what">
+    <h3>PhD Candidate</h3>
+    <p class="cv-where">Institute of Science and Technology Austria (ISTA) &middot; Klosterneuburg, Austria</p>
+    <p>Engineered high-performance approximate message passing frameworks for Bayesian inference in C++ and Python, achieving <strong>10&times; speed-ups</strong> over traditional MCMC methods while maintaining superior variable selection accuracy.</p>
+    <ul>
+      <li><strong>Scalable high-dimensional genomic inference.</strong> Developed and open-sourced <a href="https://github.com/medical-genomics-group/gVAMP">gVAMP</a> and <a href="https://github.com/Information-and-learning-for-genomics/Time2EVAMP">gVAMPomi</a>. Processed 17 million single nucleotide polymorphisms to execute the largest joint GWAS to date, achieving a state-of-the-art 46% prediction accuracy for human height.</li>
+      <li><strong>Proteomic survival analysis.</strong> Built <a href="https://github.com/Information-and-learning-for-genomics/Time2EVAMP">vampW</a>, a scalable Bayesian framework modelling disease onset times. Applied to the UK Biobank Pharma Proteomics dataset, achieving a 26&ndash;33% relative improvement in onset prediction over penalised Cox and baseline deep-learning approaches.</li>
+      <li><strong>Cross-field collaboration.</strong> Partnered with the Textile Recycling Group at TU Wien on targeted statistical analyses and data visualisations supporting their engineering processes.</li>
+    </ul>
+    <p style="margin-top:.6rem"><em>Relevant coursework:</em> pharmacoinformatics, probabilistic graphical models, deep-learning topics in computer-aided drug design.</p>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-when">Nov 2024 &ndash; Nov 2025</div>
+  <div class="cv-what">
+    <h3>Machine Learning &amp; Privacy Intern</h3>
+    <p class="cv-where">University of Vienna &middot; Vienna, Austria</p>
+    <ul>
+      <li>Developed a modular <a href="https://github.com/ADepope/modular-Lan-MIA">Python library</a> for benchmarking membership inference attacks (MIA) on large language models.</li>
+      <li>Designed and implemented a robust document-level differential privacy auditing framework.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-when">Jul 2019 &ndash; Aug 2019</div>
+  <div class="cv-what">
+    <h3>Software Engineer Intern</h3>
+    <p class="cv-where">CERN (European Organization for Nuclear Research) &middot; Geneva, Switzerland</p>
+    <ul>
+      <li>Integrated 11 environmental data pipelines into the CERN CMS Online Monitoring System.</li>
+      <li>Developed 13 Java aggregation-layer endpoints and 16 Python presentation probes using Plotly.js, optimising latency and automating detector on-call reporting.</li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="skills">Technical skills</h2>
+
+<div class="skill-table">
+  <div class="skill-row">
+    <b>Programming</b>
+    <div><strong>Python</strong> (pandas, PyTorch, Hugging Face, scikit-learn), <strong>C++</strong> (OpenMP, MPI, Eigen), <strong>R</strong>, CUDA, SQL, Bash</div>
+  </div>
+  <div class="skill-row">
+    <b>Data science &amp; ML</b>
+    <div>High-dimensional Bayesian inference, statistics, probabilistic predictive modelling, numerical optimisation, survival analysis</div>
+  </div>
+  <div class="skill-row">
+    <b>Bioinformatics</b>
+    <div>Large-scale GWAS, single-cell foundation models, Nextflow, DNAnexus</div>
+  </div>
+  <div class="skill-row">
+    <b>DevOps &amp; tools</b>
+    <div>Git, Docker, SLURM, high-performance computing clusters, Claude Code</div>
+  </div>
+</div>
+
+<h2 id="education">Education</h2>
+
+<div class="cv-entry">
+  <div class="cv-when">Sep 2020 &ndash; Jul 2026</div>
+  <div class="cv-what">
+    <h3>PhD in Statistical Genetics</h3>
+    <p class="cv-where">Institute of Science and Technology Austria (ISTA)</p>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-when">Sep 2018 &ndash; Sep 2020</div>
+  <div class="cv-what">
+    <h3>MSc in Mathematical Statistics</h3>
+    <p class="cv-where">University of Zagreb &middot; GPA 5.0 / 5.0</p>
+  </div>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-when">Sep 2015 &ndash; Sep 2018</div>
+  <div class="cv-what">
+    <h3>BSc in Mathematics</h3>
+    <p class="cv-where">University of Zagreb &middot; GPA 5.0 / 5.0</p>
+  </div>
+</div>
+
+<h2 id="transferable">Transferable skills</h2>
+
+<ul>
+  <li><strong>Public speaking.</strong> 40+ presentations translating complex computational architecture for diverse audiences, including a <em>Best Student Presentation</em> award at the European Mathematical Genetics Meeting (2024).</li>
+  <li><strong>Mentorship.</strong> Mentored 5 technical interns and served as teaching assistant for <em>Modern Machine Learning</em> at ISTA.</li>
+  <li><strong>End-to-end delivery.</strong> Directed projects through the full data lifecycle: theoretical conception, robust HPC implementation, publication.</li>
+</ul>
+
+<h2 id="publications-short">Key publications</h2>
+
+<p>The full list, with preprints, code and talks, is on the <a href="{{ "/publications/" | relative_url }}">publications page</a>.</p>
+
+<ul>
+  <li><strong>Depope, A.</strong>, Bajzik, J., Mondelli, M., Robinson, M. R. &ldquo;Joint modeling of whole-genome sequencing data for human height via approximate message passing.&rdquo; <em>Cell Genomics</em> 6(5), 101162, 2026. <a href="https://doi.org/10.1016/j.xgen.2026.101162">[DOI]</a></li>
+  <li>Bajzik, J.*, <strong>Depope, A.</strong>*, et al. &ldquo;Joint Variable Selection in Proteomics Survival Models.&rdquo; <em>ICLR Workshop on Machine Learning for Genomics Explorations</em>, 2026. <a href="https://openreview.net/forum?id=Re1rA204zd">[OpenReview]</a></li>
+  <li><strong>Depope, A.</strong>, Mondelli, M., Robinson, M. R. &ldquo;Inference of Genetic Effects via Approximate Message Passing.&rdquo; <em>IEEE ICASSP</em>, 2024. <a href="https://doi.org/10.1109/ICASSP48485.2024.10447198">[DOI]</a></li>
+</ul>
+
+<h2 id="languages">Languages &amp; interests</h2>
+
+<dl class="kv">
+  <dt>Languages</dt>
+  <dd>Croatian (native) &middot; English (fluent) &middot; German (A2)</dd>
+  <dt>Work eligibility</dt>
+  <dd>Croatian EU citizen</dd>
+  <dt>Interests</dt>
+  <dd>Hiking &mdash; most recent peak above 4,000 m: Mauna Kea, Hawaii &mdash; running, and volunteering as a lecturer in competitive mathematics for gifted high-school students.</dd>
+</dl>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>Prof. <a href="http://marcomondelli.com">Marco Mondelli</a>, ISTA &mdash; <a href="mailto:marco.mondelli@ist.ac.at">marco.mondelli@ist.ac.at</a></li>
+  <li>Prof. <a href="https://ist.ac.at/en/research/robinson-group/">Matthew Robinson</a>, ISTA &mdash; <a href="mailto:matthew.robinson@ist.ac.at">matthew.robinson@ist.ac.at</a></li>
+</ul>

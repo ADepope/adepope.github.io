@@ -1,0 +1,118 @@
+---
+title: "Software"
+layout: page
+description: "Open-source software by Al Depope: gVAMP, sgVAMP, TLgVAMP, Time2EVAMP and more."
+---
+
+<p class="lede">Methods are only useful if other people can run them. Everything below is open source &mdash; mostly C++ with MPI and CUDA for the inference engines, and Python for analysis and tooling.</p>
+
+<ul class="card-grid">
+  <li class="card">
+    <span class="card-icon">{% include icon.html name="dna" %}</span>
+    <h3><a href="https://github.com/medical-genomics-group/gVAMP">gVAMP</a></h3>
+    <p>Vector approximate message passing for GWAS. Joint inference of genetic effects with a spike-and-slab prior, p-value testing via state evolution, and out-of-sample prediction &mdash; scaled to 17 million whole-genome sequence variants on UK Biobank.</p>
+    <ul class="tag-row">
+      <li class="tag is-quiet">C++</li>
+      <li class="tag is-quiet">MPI</li>
+      <li class="tag is-quiet">HPC</li>
+    </ul>
+    <div class="card-foot">
+      <a href="https://github.com/medical-genomics-group/gVAMP">{% include icon.html name="github" %} Repository</a>
+      <a href="{{ "/gvamp/" | relative_url }}">{% include icon.html name="book" %} Tutorial</a>
+      <a href="https://doi.org/10.1016/j.xgen.2026.101162">{% include icon.html name="external-link-alt" %} Paper</a>
+    </div>
+  </li>
+
+  <li class="card">
+    <span class="card-icon">{% include icon.html name="users" %}</span>
+    <h3><a href="https://github.com/ADepope/TLgVAMP">TLgVAMP</a></h3>
+    <p>Transfer-learning gVAMP. Borrows strength from large, well-powered cohorts to improve polygenic risk score accuracy in statistically under-represented populations, while keeping population-specific signal identifiable. Current main project.</p>
+    <ul class="tag-row">
+      <li class="tag is-quiet">C++</li>
+      <li class="tag is-quiet">Transfer learning</li>
+      <li class="tag is-quiet">Cross-ancestry PRS</li>
+    </ul>
+    <div class="card-foot">
+      <a href="https://github.com/ADepope/TLgVAMP">{% include icon.html name="github" %} Repository</a>
+    </div>
+  </li>
+
+  <li class="card">
+    <span class="card-icon">{% include icon.html name="microscope" %}</span>
+    <h3><a href="https://github.com/Information-and-learning-for-genomics/Time2EVAMP">Time2EVAMP (vampW)</a></h3>
+    <p>Approximate message passing for time-to-event data under a Weibull model. Joint variable selection over proteomic biomarkers with calibrated uncertainty, applied to the UK Biobank Pharma Proteomics Project.</p>
+    <ul class="tag-row">
+      <li class="tag is-quiet">Python</li>
+      <li class="tag is-quiet">Survival analysis</li>
+      <li class="tag is-quiet">Proteomics</li>
+    </ul>
+    <div class="card-foot">
+      <a href="https://github.com/Information-and-learning-for-genomics/Time2EVAMP">{% include icon.html name="github" %} Repository</a>
+      <a href="https://www.biorxiv.org/content/10.64898/2026.04.30.721585v1">{% include icon.html name="file-alt" %} Preprint</a>
+    </div>
+  </li>
+
+  <li class="card">
+    <span class="card-icon">{% include icon.html name="database" %}</span>
+    <h3><a href="https://github.com/medical-genomics-group/sgVAMP-py">sgVAMP</a></h3>
+    <p>The summary-statistics counterpart of gVAMP, extended to a multi-cohort setting for the joint estimation of shared and population-specific effects across ancestries.</p>
+    <ul class="tag-row">
+      <li class="tag is-quiet">Python</li>
+      <li class="tag is-quiet">Summary statistics</li>
+    </ul>
+    <div class="card-foot">
+      <a href="https://github.com/medical-genomics-group/sgVAMP-py">{% include icon.html name="github" %} Repository</a>
+      <a href="{{ "/publications/sgvamp" | relative_url }}">{% include icon.html name="arrow-right" %} Abstract</a>
+    </div>
+  </li>
+
+  <li class="card">
+    <span class="card-icon">{% include icon.html name="project-diagram" %}</span>
+    <h3><a href="https://github.com/Information-and-learning-for-genomics/Time2EVAMP">gVAMPomi</a></h3>
+    <p>Approximate message passing for epigenome-wide association studies. Applied to the Generation Scotland methylation dataset it finds 92 trait-associated CpG probes conditional on all others, against 37 for the baseline MCMC approach.</p>
+    <ul class="tag-row">
+      <li class="tag is-quiet">Methylation</li>
+      <li class="tag is-quiet">EWAS</li>
+      <li class="tag is-quiet">Association testing</li>
+    </ul>
+    <div class="card-foot">
+      <a href="https://github.com/Information-and-learning-for-genomics/Time2EVAMP">{% include icon.html name="github" %} Repository</a>
+      <a href="{{ "/publications/vampomi" | relative_url }}">{% include icon.html name="arrow-right" %} Abstract</a>
+    </div>
+  </li>
+
+  <li class="card">
+    <span class="card-icon">{% include icon.html name="brain" %}</span>
+    <h3><a href="https://github.com/ADepope/modular-Lan-MIA">modular-Lan-MIA</a></h3>
+    <p>A modular library for benchmarking membership inference attacks against large language models, together with a document-level differential privacy auditing framework. Built during a machine learning and privacy internship at the University of Vienna.</p>
+    <ul class="tag-row">
+      <li class="tag is-quiet">Python</li>
+      <li class="tag is-quiet">LLMs</li>
+      <li class="tag is-quiet">Differential privacy</li>
+    </ul>
+    <div class="card-foot">
+      <a href="https://github.com/ADepope/modular-Lan-MIA">{% include icon.html name="github" %} Repository</a>
+    </div>
+  </li>
+
+  <li class="card">
+    <span class="card-icon">{% include icon.html name="project-diagram" %}</span>
+    <h3><a href="https://github.com/ADepope/bh2025_scllms_p30">Single-cell LLM pipeline</a></h3>
+    <p>A Nextflow pipeline for fine-tuning and running inference with single-cell foundation models, built at a BioHackathon.</p>
+    <ul class="tag-row">
+      <li class="tag is-quiet">Nextflow</li>
+      <li class="tag is-quiet">Python</li>
+      <li class="tag is-quiet">Single cell</li>
+    </ul>
+    <div class="card-foot">
+      <a href="https://github.com/ADepope/bh2025_scllms_p30">{% include icon.html name="github" %} Repository</a>
+    </div>
+  </li>
+</ul>
+
+<div class="callout">
+  {% include icon.html name="server" %}
+  <div>
+    <p><strong>Running gVAMP yourself?</strong> The <a href="{{ "/gvamp/" | relative_url }}">gVAMP tutorial</a> walks through compiling on an HPC cluster, inference under the Bayesian linear model, LOO/LOCO p-values, out-of-sample prediction, and running on DNAnexus via Docker.</p>
+  </div>
+</div>

@@ -2,9 +2,11 @@
 layout: page
 title: Epigenome-wide association studies using approximate message passing
 authors: Jakub Bajzik*, Al Depope, Daniel L. McCartney, Markus J. Bauer, Riccardo E. Marioni, Marco Mondelli and Matthew R. Robinson
-publication: 
-year: 2024
+year: 2025
+order: 20
 pdf: false
+status: Work in progress
+code: https://github.com/Information-and-learning-for-genomics/Time2EVAMP
 summary: We develop gVAMPomi, approximate message passing-based paradigm, and apply it to the largest human methylation dataset generated to date, the Generation Scotland study. We find 92 CpG probes whose effects are significantly associated with traits, conditional on all other CpG probes, representing a significant increase over 37 CpG probes discovered by baseline MCMC approach.
 ---
 

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img"
+     aria-label="Schematic of transfer learning between a large source cohort and a smaller target cohort">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d2a4f"/><stop offset="1" stop-color="#071a33"/>
+    </linearGradient>
+    <radialGradient id="cloudA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5f9de0" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#5f9de0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cloudB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f0a53f" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#f0a53f" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d8e6f7"/>
+    </marker>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <g opacity="0.5" stroke="#9dc2ee" stroke-width="1">
+    <path d="M0 128 H512 M0 256 H512 M0 384 H512" opacity="0.14"/>
+    <path d="M128 0 V512 M256 0 V512 M384 0 V512" opacity="0.14"/>
+  </g>
+
+  <circle cx="168" cy="196" r="120" fill="url(#cloudA)"/>
+  <circle cx="344" cy="330" r="86" fill="url(#cloudB)"/>
+
+  <g fill="#bcd8f8">
+    <circle cx="120" cy="170" r="4"/><circle cx="163" cy="146" r="4"/><circle cx="205" cy="182" r="4"/>
+    <circle cx="140" cy="222" r="4"/><circle cx="192" cy="238" r="4"/><circle cx="168" cy="192" r="4"/>
+    <circle cx="228" cy="150" r="4"/><circle cx="104" cy="224" r="4"/><circle cx="186" cy="118" r="4"/>
+    <circle cx="240" cy="216" r="4"/><circle cx="122" cy="122" r="4"/><circle cx="214" cy="262" r="4"/>
+  </g>
+  <g fill="#ffd9a3">
+    <circle cx="322" cy="312" r="4"/><circle cx="360" cy="296" r="4"/><circle cx="344" cy="348" r="4"/>
+    <circle cx="384" cy="336" r="4"/><circle cx="306" cy="352" r="4"/><circle cx="366" cy="372" r="4"/>
+  </g>
+
+  <path d="M228 244 C 266 268, 282 286, 306 306" stroke="#d8e6f7" stroke-width="3.5" fill="none"
+        marker-end="url(#arrow)" stroke-linecap="round"/>
+
+  <text x="168" y="88" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="25"
+        font-weight="700" fill="#e8f1fc" letter-spacing="0.5">source cohort</text>
+  <text x="168" y="116" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="19"
+        fill="#9dc2ee">large, well powered</text>
+
+  <text x="352" y="434" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="25"
+        font-weight="700" fill="#ffe6c2" letter-spacing="0.5">target cohort</text>
+  <text x="352" y="462" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="19"
+        fill="#f0bd7a">under-represented</text>
+
+  <text x="36" y="470" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="700"
+        fill="#ffffff" opacity="0.92" letter-spacing="1">TLgVAMP</text>
+</svg>

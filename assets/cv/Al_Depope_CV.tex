@@ -1,0 +1,177 @@
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+\documentclass[a4paper,11pt]{article}
+\usepackage{fontawesome5}
+\usepackage{url}
+\usepackage{parskip} 	
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+
+% changing fonts
+\usepackage[sfdefault]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% Turn on the custom style
+\pagestyle{fancy}
+\fancyhf{} % Clear all default headers and footers
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{- \thepage\ -}
+
+%----------------------------------------------------------------------------------------
+%	VISUAL STYLING CUSTOMIZATIONS
+%----------------------------------------------------------------------------------------
+% Define a professional accent color
+\definecolor{primary}{RGB}{0, 50, 120} 
+
+% Section Formatting
+\titleformat{\section}{\Large\bfseries\scshape\raggedright\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% Custom Command for Experience Headers
+\newcommand{\roleheader}[4]{
+    \noindent
+    \begin{tabularx}{\linewidth}{@{} X r @{}}
+        {\Large \textbf{\textcolor{primary}{#1}}} & {\normalsize \textbf{#2}} \\
+        {\normalsize \textsc{#3}} & {\normalsize \textit{#4}}
+    \end{tabularx}
+    \vspace{2pt}
+}
+
+% Hyperref setup
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\pagestyle{empty} 
+\pagestyle{fancy}
+
+\begin{center}
+    \Huge{\textbf{\textsc{Al Depope, PhD}}} \\[12pt]
+    \small{
+        \href{https://github.com/ADepope}{\raisebox{-0.1\height}\faGithub\ ADepope} ~ $|$ ~ 
+        \href{https://www.linkedin.com/in/al-depope/}{\raisebox{-0.1\height}\faLinkedin\ Al Depope} ~ $|$ ~ 
+        \href{https://adepope.github.io}{\raisebox{-0.1\height}\faGlobe \ adepope.github.io} ~ $|$ ~ 
+        \href{mailto:al.depope@ist.ac.at}{\raisebox{-0.1\height}\faEnvelope \ al.depope@ist.ac.at} ~ $|$ ~ 
+        \href{https://orcid.org/0000-0001-8583-0609}{\raisebox{-0.1\height}\faOrcid\ 0000-0001-8583-0609}
+    } \\[5pt]
+    \small{\textbf{Work Eligibility:} Croatian EU citizen}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	PROFILE
+%----------------------------------------------------------------------------------------
+\section{Profile}
+
+{\setlength{\emergencystretch}{3em} \hyphenpenalty=10000 \exhyphenpenalty=10000 \noindent  
+As a Postdoctoral Researcher at IST Austria, I specialize in mathematically grounded machine learning and statistical genetics, developing novel Bayesian models and inference procedures to improve biomarker selection and individual risk prediction. I combine probabilistic modeling with high-performance computing (C++, CUDA, distributed systems) and advanced data analysis (Python, R). I am now seeking a computational biology position where I can leverage this and develop tools that drive real-world impact.
+\par} 
+
+\vspace{5pt}
+
+{\setlength{\emergencystretch}{3em} \hyphenpenalty=10000 \exhyphenpenalty=10000  \noindent \textbf{Core Competencies:} Probabilistic Predictive Modeling $\cdot$ Bayesian~Inference $\cdot$ Numerical Optimization $\cdot$ High-Dimensional~Inference $\cdot$ High-Performance Computing $\cdot$ Python (Pytorch) $\cdot$ Omics \par}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Programming} & \textbf{Python} (Pandas, PyTorch, Hugging Face, Scikit-learn), \textbf{C++} (OpenMP, MPI, Eigen), \textbf{R}, CUDA, SQL, Bash \\[4pt]
+\textbf{Data Science \& ML} & High-dimensional Bayesian Inference, Statistics, Probabilistic Predictive Modeling, Numerical Optimization, Survival Analysis\\[4pt]
+\textbf{Bioinformatics} & Large-scale GWAS, Single-cell Foundation Models, Nextflow, DNAnexus \\[4pt]
+\textbf{DevOps \& Tools} & Git, Docker, SLURM, High-Performance Computing Clusters, Claude Code
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Professional Experience}
+\roleheader{Postdoctoral Researcher}{Jul 2026 -- Present}{Institute of Science and Technology Austria (IST Austria)}{Klosterneuburg, Austria}
+
+\noindent Extending my doctoral work by developing \href{https://github.com/ADepope/TLgVAMP/tree/main}{TLgVAMP}, a transfer-learning framework for improved cross-ancestry polygenic risk scores.
+
+\vspace{8pt}
+
+\roleheader{PhD Candidate}{Sep 2020 -- July 2026}{Institute of Science and Technology Austria (IST Austria)}{Klosterneuburg, Austria}
+
+\noindent Engineered high-performance Approximate Message Passing frameworks for Bayesian inference in C++ and Python, achieving \textbf{10x speedups} over traditional MCMC methods while maintaining superior variable selection accuracy.
+\begin{itemize}[nosep, leftmargin=1.5em, itemsep=3pt, topsep=0pt]
+    \item[--] \textbf{Scalable High-Dimensional Genomic Inference:} Developed and open-sourced scalable inference approaches (\href{https://github.com/medical-genomics-group/gVAMP}{gVAMP}, \href{https://github.com/Information-and-learning-for-genomics/Time2EVAMP}{gVAMPomi}). Processed 17 million single nucleotide polymorphisms (SNPs) to execute the largest joint GWAS to date, achieving a state-of-the-art 46\% prediction accuracy for human height.
+    \item[--] Proteomic Survival Analysis: Built \href{https://github.com/Information-and-learning-for-genomics/Time2EVAMP}{vampW}, a scalable Bayesian framework modeling disease onset times. Applied to the UK Biobank Pharma Proteomics dataset, achieving a 26--33\% relative improvement in onset prediction over penalized Cox and baseline deep learning approaches.
+    \item[--] \textbf{Cross-Field Collaboration:} Partnered with the Textile Recycling Group at TU Wien to conduct targeted statistical analyses and develop data visualizations supporting its engineering processes.
+\end{itemize}
+
+Relevant coursework: \textbf{Pharmacoinformatics, Probabilistic Graphical Models, Deep-learning topics in the field of computer-aided drug design}
+\vspace{8pt}
+
+\newpage
+\roleheader{Machine Learning \& Privacy Intern}{Nov 2024 -- Nov 2025}{University of Vienna}{Vienna, Austria}
+\begin{itemize}[nosep, leftmargin=1.5em, itemsep=2pt, topsep=2pt]
+    \item[--] Developed a modular \href{https://github.com/ADepope/modular-Lan-MIA}{Python library} for benchmarking Membership Inference Attacks (MIA) on Large Language Models (LLMs).
+    \item[--] Designed and implemented a robust document-level differential privacy auditing framework.
+\end{itemize}
+\vspace{8pt}
+
+\roleheader{Software Engineer Intern}{Jul 2019 -- Aug 2019}{CERN (European Organization for Nuclear Research)}{Geneva, Switzerland}
+\begin{itemize}[nosep, leftmargin=1.5em, itemsep=2pt, topsep=3pt]
+    \item[--] Integrated 11 environmental data pipelines into the CERN CMS Online Monitoring System.
+    \item[--] Developed 13 Java-based aggregation layer endpoints and 16 Python-based presentation probes using Plotly.js, optimizing latency and automating detector on-call reporting.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	KEY OPEN-SOURCE PROJECTS & PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Key Publications}
+\begin{itemize}[leftmargin=*, nosep, itemsep=3pt]
+    \item \textbf{Depope, A.}, Bajzik, J., Mondelli, M., Robinson, M.R. "Joint modelling of whole genome sequence data for human height via approximate message passing." \textit{Cell Genomics}, 2026. \href{https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00024-8}{[DOI]}
+    \item Bajzik J.\textbf{*}, \textbf{Depope, A.*}, et al. "Joint Variable Selection in Proteomics Survival Models." \textit{ICLR Workshop on ML for Genomics Explorations}, 2026. \href{https://openreview.net/forum?id=Re1rA204zd}{[OpenReview]}
+    \item \textbf{Depope, A.}, Mondelli, M., Robinson, M.R. "Inference of Genetic Effects via Approximate Message Passing." \textit{IEEE ICASSP}, 2024. \href{https://doi.org/10.1109/ICASSP48485.2024.10447198}{[DOI]}
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	LEADERSHIP & COMMUNICATION
+%----------------------------------------------------------------------------------------
+\section{Transferable skills}
+\begin{itemize}[nosep, leftmargin=1.5em, itemsep=3pt, topsep=0pt]
+    \item[--] \textbf{Public Speaking:} Delivered 40+ presentations translating complex computational architecture to diverse audiences, winning "Best Student Presentation" at the European Mathematical Genetics Meeting (2024).
+    \item[--] \textbf{Mentorship:} Mentored 5 technical interns and served as Teaching Assistant for \textit{Modern Machine Learning} course at IST Austria.
+    \item[--] \textbf{End-to-End Delivery:} Directed projects through the entire data lifecycle: from theoretical conception and robust HPC implementation to final publication.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{} X r @{}}
+    \textbf{PhD in Statistical Genetics} $|$ \textit{IST Austria} & Sep 2020 -- July 2026 \\
+    \textbf{M.Sc. in Mathematical Statistics} (GPA: 5.0/5.0) $|$ \textit{University of Zagreb} & Sep 2018 -- Sep 2020 \\
+    \textbf{B.Sc. in Mathematics} (GPA: 5.0/5.0) $|$ \textit{University of Zagreb} & Sep 2015 -- Sep 2018 \\
+\end{tabularx}
+
+\section{Languages}
+Croatian (native) $\cdot$ English (fluent) $\cdot$ German (A2)
+
+\section{Interests}
+In my free time, I enjoy hiking (my most recent peak over 4,000 meters was Mauna Kea in Hawaii) and volunteer by delivering competitive mathematics lectures to gifted high-school students.
+
+\section{References}
+\begin{itemize}
+    \item[--] Prof. \href{http://marcomondelli.com}{Marco Mondelli}, IST Austria, \url{marco.mondelli@ist.ac.at}
+    \item[--] Prof. \href{https://ist.ac.at/de/forschung/robinson-gruppe/}{Matthew Robinson}, IST Austria, \url{matthew.robinson@ist.ac.at}
+\end{itemize}
+
+\end{document}

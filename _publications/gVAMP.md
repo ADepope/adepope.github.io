@@ -1,10 +1,16 @@
 ---
 layout: page
 title: Joint modelling of whole genome sequence data for human height via approximate message passing
-authors: Al Depope*, Jakub Bajzik, Marco Mondelli and Matthew R. Robinson
+authors: Al Depope, Jakub Bajzik, Marco Mondelli and Matthew R. Robinson
 summary: We develop a new algorithmic paradigm based on approximate message passing, gVAMP, to directly fine-map whole-genome sequence (WGS) variants and gene burden scores, conditional on all other measured DNA variation genome-wide. We find that the genetic architecture of height inferred from WGS data differs from that inferred from imputed single nucleotide polymorphism (SNP) variants:common variant associations from imputed SNP data are allocated to WGS variants of lower frequency, and there is a stronger relationship of effect size and variant frequency. 
-year: 2024
+year: 2026
+order: 40
 pdf: true
+publication: Cell Genomics 6(5), 101162
+status: Published in Cell Genomics, 2026
+doi: https://doi.org/10.1016/j.xgen.2026.101162
+preprint: https://www.biorxiv.org/content/10.1101/2023.09.14.557703
+code: https://github.com/medical-genomics-group/gVAMP
 ---
 
 ## Abstract
