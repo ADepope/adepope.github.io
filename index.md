@@ -144,7 +144,7 @@ I hike whenever the calendar allows &mdash; my most recent peak above 4,000 metr
 <ul class="photo-grid">
 {% for photo in site.data.hikes %}
   <li class="photo">
-    <img src="{{ "/images/" | append: photo.file | relative_url }}" alt="{{ photo.alt }}" loading="lazy">
+    <img src="{{ "/images/" | append: photo.file | relative_url }}" alt="{{ photo.alt }}" loading="lazy"{% if photo.position %} style="object-position: {{ photo.position }}"{% endif %}>
     {% if photo.caption %}<span class="photo-caption">{{ photo.caption }}</span>{% endif %}
   </li>
 {% endfor %}

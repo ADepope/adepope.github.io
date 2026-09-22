@@ -17,24 +17,26 @@ ap.add_argument('source')
 ap.add_argument('--out', default='images/portrait.jpg')
 ap.add_argument('--size', type=int, default=760)
 ap.add_argument('--focus', default='0.5,0.35')
-ap.add_argument('--ratio', default='1:1')
+ap.add_argument('--ratio', default='1:1',
+                help="W:H to crop to, or 'none' to keep the source aspect")
 ap.add_argument('--quality', type=int, default=86)
 a = ap.parse_args()
 
 fx, fy = (float(v) for v in a.focus.split(','))
-rw, rh = (float(v) for v in a.ratio.replace('/', ':').split(':'))
-target = rw / rh
-
 im = ImageOps.exif_transpose(Image.open(a.source)).convert('RGB')
 w, h = im.size
 
-# largest box of the requested aspect that fits inside the source
-cw, ch = (h * target, h) if w / h > target else (w, w / target)
-cw, ch = int(round(cw)), int(round(ch))
-
-left = min(max(int(w * fx - cw / 2), 0), w - cw)
-top = min(max(int(h * fy - ch / 2), 0), h - ch)
-im = im.crop((left, top, left + cw, top + ch))
+if a.ratio.lower() in ('none', 'native', 'keep'):
+    cw, ch = w, h
+else:
+    rw, rh = (float(v) for v in a.ratio.replace('/', ':').split(':'))
+    target = rw / rh
+    # largest box of the requested aspect that fits inside the source
+    cw, ch = (h * target, h) if w / h > target else (w, w / target)
+    cw, ch = int(round(cw)), int(round(ch))
+    left = min(max(int(w * fx - cw / 2), 0), w - cw)
+    top = min(max(int(h * fy - ch / 2), 0), h - ch)
+    im = im.crop((left, top, left + cw, top + ch))
 
 scale = a.size / max(cw, ch)
 im = im.resize((max(1, int(round(cw * scale))), max(1, int(round(ch * scale)))), Image.LANCZOS)

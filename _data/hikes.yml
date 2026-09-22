@@ -1,13 +1,28 @@
 # Photos shown in the "Beyond research" section of index.md.
 #
 # To add one:
-#   1. put the image in images/  (tools/update-photo.py will crop and compress it)
-#   2. add an entry below
+#   1. python3 tools/update-photo.py <source> --out images/<name>.jpg --ratio none --size 1000
+#   2. add an entry below — order here is the order on the page
 #
-#   - file: some-hike.jpg          # relative to images/
-#     alt: "..."                   # description for screen readers
-#     caption: "..."               # optional, shown under the photo
+#   - file: some-hike.jpg     # relative to images/
+#     alt: "..."              # description for screen readers
+#     caption: "..."          # optional, shown under the photo
+#     position: "center 60%"  # optional CSS object-position, for when the 4:3
+#                             # grid crop would cut the wrong part of a photo
 
 - file: hiking.jpg
-  alt: "Al Depope hiking on a rocky alpine trail below a glaciated ridge"
+  alt: "Al Depope standing on a rock slab on an alpine trail, glaciated peaks behind"
   caption: "On the hike up to the Triftbrücke, Switzerland."
+
+- file: gspaltenhorn.jpg
+  alt: "A hiker on a scree path approaching a glacier below steep limestone walls"
+  caption: "On the way to the Gspaltenhornhütte, Switzerland."
+  position: "center 62%"
+
+- file: schesaplana.jpg
+  alt: "Al Depope on a misty summit with trekking poles, a turquoise reservoir far below"
+  caption: "On the summit of the Schesaplana, above the Lünersee."
+
+- file: saentis.jpg
+  alt: "A hiker on a narrow grassy ridge trail with jagged limestone towers ahead"
+  caption: "Below Säntis in the Alpstein, Switzerland."
