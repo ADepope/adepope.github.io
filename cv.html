@@ -10,9 +10,6 @@ description: "Curriculum vitae of Al Depope, PhD — Postdoctoral Researcher at 
   {% if site.cv_pdf and site.cv_pdf != "" %}
   <a class="pill-link is-primary" href="{{ site.cv_pdf | relative_url }}">{% include icon.html name="download" %} Download PDF</a>
   {% endif %}
-  {% if site.cv_tex and site.cv_tex != "" %}
-  <a class="pill-link" href="{{ site.cv_tex | relative_url }}">{% include icon.html name="file-alt" %} LaTeX source</a>
-  {% endif %}
   <a class="pill-link" href="mailto:{{ site.email }}">{% include icon.html name="envelope" %} {{ site.email }}</a>
   <a class="pill-link" href="https://orcid.org/{{ site.orcid }}">{% include icon.html name="orcid" %} ORCID</a>
 </div>

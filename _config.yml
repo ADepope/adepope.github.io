@@ -17,7 +17,6 @@ portrait: "/images/portrait.jpg"
 # CV. The PDF is compiled from the .tex by tools/build-cv.sh; set cv_pdf to ""
 # to hide the download button on the CV page.
 cv_pdf: "/assets/cv/Al_Depope_CV.pdf"
-cv_tex: "/assets/cv/Al_Depope_CV.tex"
 
 # Layout
 
