@@ -1,0 +1,13 @@
+# Photos shown in the "Beyond research" section of index.md.
+#
+# To add one:
+#   1. put the image in images/  (tools/update-photo.py will crop and compress it)
+#   2. add an entry below
+#
+#   - file: some-hike.jpg          # relative to images/
+#     alt: "..."                   # description for screen readers
+#     caption: "..."               # optional, shown under the photo
+
+- file: hiking.jpg
+  alt: "Al Depope hiking on a rocky alpine trail below a glaciated ridge"
+  caption: "On the hike up to the Triftbrücke, Switzerland."

@@ -141,7 +141,11 @@ Before ISTA I obtained a BSc in Mathematics and an MSc in Mathematical Statistic
 
 I hike whenever the calendar allows &mdash; my most recent peak above 4,000 metres was Mauna Kea in Hawaii &mdash; and I run. When there is time, I volunteer by preparing and giving competitive mathematics lectures to gifted students at my [old high school](https://gimnazija-amohorovicica-ri.skole.hr) and at [MNM](https://mnm.hr) summer camps.
 
-<figure class="figure">
-  <img src="{{ "/images/hiking.jpg" | relative_url }}" alt="Al Depope hiking on a rocky alpine trail below a glaciated ridge" loading="lazy" width="1048" height="1100">
-  <figcaption>On the hike up to the Triftbr&uuml;cke, Switzerland.</figcaption>
-</figure>
+<ul class="photo-grid">
+{% for photo in site.data.hikes %}
+  <li class="photo">
+    <img src="{{ "/images/" | append: photo.file | relative_url }}" alt="{{ photo.alt }}" loading="lazy">
+    {% if photo.caption %}<span class="photo-caption">{{ photo.caption }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ul>
