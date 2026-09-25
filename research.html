@@ -20,9 +20,19 @@ description: "Research projects by Al Depope: approximate message passing for ge
 <ul class="project-list">
 {% for pub in publications %}
   {% if pub.teaser %}{% assign thumb = pub.teaser %}{% else %}{% assign thumb = pub.slug | append: "_small.jpg" %}{% endif %}
-  {% if pub.abstract == false %}{% assign target = pub.code | default: pub.doi %}{% else %}{% assign target = pub.url | relative_url %}{% endif %}
+  {%- comment -%}
+    Where the thumbnail and title point. Entries with an abstract page go there;
+    the rest fall back to whatever artefact exists, and render unlinked if none does.
+  {%- endcomment -%}
+  {% assign target = "" %}
+  {% if pub.abstract == false %}
+    {% if pub.code %}{% assign target = pub.code %}
+    {% elsif pub.doi %}{% assign target = pub.doi %}
+    {% elsif pub.pdf %}{% assign target = "/download/" | append: pub.slug | append: ".pdf" | relative_url %}
+    {% endif %}
+  {% else %}{% assign target = pub.url | relative_url %}{% endif %}
   <li class="project">
-    {% if target %}
+    {% if target != "" %}
     <a class="project-thumb" href="{{ target }}" tabindex="-1" aria-hidden="true">
       <img src="{{ "/images/" | append: thumb | relative_url }}" alt="" loading="lazy" width="256" height="256">
     </a>
@@ -32,7 +42,7 @@ description: "Research projects by Al Depope: approximate message passing for ge
     </span>
     {% endif %}
     <div class="project-body">
-      <p class="project-title">{% if target %}<a href="{{ target }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
+      <p class="project-title">{% if target != "" %}<a href="{{ target }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
       <p class="project-authors">{{ pub.authors }}{% if pub.status %} &middot; <span style="color:var(--accent);font-weight:700">{{ pub.status }}</span>{% endif %}</p>
       <p class="project-summary">{{ pub.summary }}</p>
       <div class="link-row">
