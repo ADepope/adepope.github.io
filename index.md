@@ -7,7 +7,7 @@ description: "Al Depope, PhD — Postdoctoral Researcher at ISTA working on Baye
 
 <div class="hero">
   <div class="hero-text">
-    <h1 class="hero-name">Al Depope, PhD</h1>
+    <h1 class="hero-name">Al Depope</h1>
     <p class="hero-role">Postdoctoral Researcher &middot; Statistical Genetics &amp; Machine Learning</p>
     <p class="hero-affil">Institute of Science and Technology Austria (ISTA) &middot; Klosterneuburg, Austria</p>
     <p class="hero-lede">I build mathematically grounded machine learning for genomics &mdash; Bayesian models and inference procedures that scale to biobank-sized data, and the high-performance code that makes them run.</p>
