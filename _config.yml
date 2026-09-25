@@ -44,6 +44,7 @@ external:                  # shows a footer with social links - for available ic
 # Extra Font Awesome icons to bake into /assets/fontawesome/icons.svg so they can
 # be used inline anywhere via <svg class="icon"><use xlink:href="...#name"></use></svg>
 extra_icons:
+  - passport
   - file-pdf
   - file-alt
   - external-link-alt
