@@ -93,7 +93,7 @@ Before ISTA I obtained a BSc in Mathematics and an MSc in Mathematical Statistic
 <ul class="timeline">
   <li class="is-new">
     <time datetime="2026-07">July 2026</time>
-    <p>I completed my PhD at ISTA and started as a Postdoctoral Researcher in the same institute, continuing to develop <a href="https://github.com/ADepope/TLgVAMP">TLgVAMP</a>, a transfer-learning framework for cross-ancestry polygenic risk scores.</p>
+    <p>I completed my PhD at ISTA and started as a Postdoctoral Researcher in the same institute, continuing to develop <a href="https://github.com/ADepope/TLgVAMP">TLgVAMP</a>, a transfer-learning framework for cross-ancestry polygenic risk scores. <a href="{{ "/download/Depope_PhD_thesis.pdf" | relative_url }}">[Thesis PDF]</a></p>
   </li>
   <li class="is-new">
     <time datetime="2026-05">May 2026</time>
